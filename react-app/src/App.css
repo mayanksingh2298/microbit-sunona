@@ -1,0 +1,109 @@
+/* src/App.css */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FFDEE9 0%, #B5FFFC 100%);
+  animation: backgroundAnimation 10s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background: linear-gradient(135deg, #FFDEE9 0%, #B5FFFC 100%);
+  }
+  100% {
+    background: linear-gradient(135deg, #FFDEE9 100%, #B5FFFC 0%);
+  }
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  width: 90%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app-title {
+  font-size: 28px;
+  color: #FF4081;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: popIn 1s infinite alternate;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.user-button {
+  background-color: #FF4081 !important;
+  color: white !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  border-radius: 20px !important;
+}
+
+.main-card {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 16px !important;
+  border: none;
+}
+
+.welcome-message {
+  font-size: 22px;
+  color: #FF4081;
+  font-weight: bold;
+}
+
+.status-button, .heart-button {
+  background-color: #FF80AB !important;
+  color: white !important;
+  font-size: 16px !important;
+  padding: 10px 20px !important;
+  border-radius: 20px !important;
+  transition: transform 0.3s;
+}
+
+.status-button:hover, .heart-button:hover {
+  transform: scale(1.05);
+}
+
+.message-display {
+  font-weight: 500;
+  color: #555;
+  margin-top: 10px;
+  font-size: 18px;
+}
