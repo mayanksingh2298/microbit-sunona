@@ -163,7 +163,6 @@ function App() {
           <div className="space-y-6">
             <h2 className="text-2xl text-center text-purple-500 font-semibold">Welcome, {user}!</h2>
             <div className="flex flex-col items-center space-y-4">
-              <p className="text-lg text-purple-700 font-medium">Micro:bit Status:</p>
               {!microbitConnected ? (
                 <button className="bg-indigo-400 hover:bg-indigo-500 text-white font-bold py-2 px-6 rounded-full transition duration-300" onClick={handleConnectMicrobit}>Connect Micro:bit</button>
               ) : (
@@ -171,7 +170,6 @@ function App() {
               )}
             </div>
             <div className="text-center space-y-4">
-              <p className="text-lg text-purple-700 font-medium">Messaging</p>
               {peerConnected && peerMicrobitConnected ? (
                 <div className="flex flex-col space-y-2">
                   <button className="bg-green-400 hover:bg-green-500 text-white font-bold py-2 px-6 rounded-full transition duration-300 w-fit mx-auto" onClick={() => handleSendMessage('heart')}>💖</button>
