@@ -4,7 +4,8 @@ let socket;
 // Function to initialize the WebSocket connection
 export function initWebSocketConnection(onMessage) {
   if (!socket || socket.readyState === WebSocket.CLOSED) {
-    socket = new WebSocket('ws://localhost:4000'); // Connect to the signaling server
+    // socket = new WebSocket('ws://localhost:4000'); // Connect to the signaling server
+    socket = new WebSocket('wss://microbit.rcher.me/ws'); // Connect to the signaling server
 
     socket.onopen = () => {
       console.log('Connected to WebSocket signaling server');
